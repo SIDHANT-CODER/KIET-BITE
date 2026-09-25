@@ -164,7 +164,7 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .nav-toggle {
@@ -210,12 +210,14 @@ button {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #fff;
   box-shadow: 0 12px 22px rgba(255, 122, 26, 0.24);
+  padding: 15px 25px;
 }
 
 .btn-ghost {
   background: #fff;
   border-color: var(--line);
   color: var(--accent);
+  padding: 15px 25px;
 }
 
 .btn-outline {
