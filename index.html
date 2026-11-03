@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -31,20 +31,16 @@
         <span class="hamburger-bar"></span>
       </label>
 
-      <!-- Navigation links + auth buttons -->
+      <!-- Navigation links -->
       <div class="nav-menu">
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#courts">Food Courts</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="food-courts.html">Food Courts</a></li>
           <li><a href="#slots">Pickup Slots</a></li>
           <li><a href="#offers">Offers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-actions">
-          <a class="btn btn-ghost" href="login.html">Login</a>
-          <a class="btn btn-primary" href="#signup">Sign Up</a>
-        </div>
       </div>
 
     </nav>
@@ -53,45 +49,42 @@
   <main>
 
     <!-- ============================= HERO ============================= -->
-    <section class="hero" id="home">
+    <section class="hero home-hero" id="home">
       <div class="container hero-inner">
 
         <div class="hero-copy">
-          <p class="pill">⏱️ Order in class · Collect at break</p>
-          <h1>Skip The Line, Not Your Lunch.</h1>
+          <p class="pill hero-kicker"><span class="hero-kicker-dot" aria-hidden="true"></span> WELCOME TO YOUR CAMPUS KITCHEN</p>
+          <h1>What sounds good<br /><span class="hero-title-accent">today?</span></h1>
           <p class="hero-text">
-            Place your order while you are still sitting in class. Pick a food
-            court, pick a pickup slot, and walk straight to the counter when the
-            break bell rings — your food is already packed and paid for.
+            Find a new favourite, check what’s cooking nearby, and choose a pickup
+            spot that fits your day. Your next good meal is just a few clicks away.
           </p>
           <div class="hero-buttons">
-            <a class="btn btn-primary btn-lg" href="#menu">Pre-Order For Break</a>
-            <a class="btn btn-outline btn-lg" href="#courts">Choose Food Court</a>
+            <a class="btn btn-outline btn-lg" href="food-courts.html">Explore Pickup Spots</a>
           </div>
           <ul class="hero-meta">
-            <li><strong>0 min</strong><span>Time in queue</span></li>
-            <li><strong>6</strong><span>Campus food courts</span></li>
-            <li><strong>18 min</strong><span>Break time saved</span></li>
+            <li><strong>01</strong><span>Browse today’s menu</span></li>
+            <li><strong>02</strong><span>Choose your pickup spot</span></li>
+            <li><strong>03</strong><span>Enjoy your break</span></li>
           </ul>
         </div>
 
         <div class="hero-media">
-          <!-- Decorative shapes behind the image -->
+          <span class="hero-image-note">GOOD FOOD<br />RIGHT AROUND<br />THE CORNER <span aria-hidden="true">↘</span></span>
           <span class="blob blob-1" aria-hidden="true"></span>
           <span class="blob blob-2" aria-hidden="true"></span>
           <span class="ring" aria-hidden="true"></span>
 
           <img
             class="hero-img"
-            src="WhatsApp Image 2026-09-24 at 9.43.02 PM.jpeg"
-            alt="A packed meal waiting at the pickup counter" />
+            src="/landing-image.jpeg"
+            alt="A tree-lined walkway between campus buildings" />
 
-          <!-- Floating pickup-status card -->
           <div class="floating-card">
-            <span class="floating-icon" aria-hidden="true">✅</span>
+            <span class="floating-icon" aria-hidden="true">↗</span>
             <span class="floating-text">
-              <strong>Ready At 12:30 PM</strong>
-              <small>Counter 3 · Central Food Court</small>
+              <strong>Your next campus favourite.</strong>
+              <small>Pick a counter · We’ll take it from here</small>
             </span>
           </div>
         </div>
@@ -131,62 +124,6 @@
             <h3>Pay Online, Just Collect</h3>
             <p>Show your pickup code at the counter and walk away with your food.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================= FOOD COURTS ============================= -->
-    <section class="section section-muted" id="courts">
-      <div class="container">
-        <header class="section-head">
-          <h2>Pick Your Pickup Point</h2>
-          <p>Six counters across campus. Order from any of them and collect where it suits you.</p>
-        </header>
-
-        <div class="grid grid-3">
-
-          <article class="card court-card">
-            <div class="court-top">
-              <h3>Central Food Court</h3>
-              <span class="court-status open">Open</span>
-            </div>
-            <p>Block C, ground floor · 2 min from Lecture Hall 1</p>
-            <ul class="court-meta">
-              <li><strong>18</strong><span>Live queue</span></li>
-              <li><strong>12 min</strong><span>Prep time</span></li>
-              <li><strong>Counter 3</strong><span>Pickup desk</span></li>
-            </ul>
-            <a class="btn btn-outline btn-sm" href="#menu">Order From Here</a>
-          </article>
-
-          <article class="card court-card">
-            <div class="court-top">
-              <h3>Hostel Mess Cafe</h3>
-              <span class="court-status open">Open</span>
-            </div>
-            <p>Boys &amp; Girls hostel block · 1 min from your room</p>
-            <ul class="court-meta">
-              <li><strong>7</strong><span>Live queue</span></li>
-              <li><strong>10 min</strong><span>Prep time</span></li>
-              <li><strong>Counter 1</strong><span>Pickup desk</span></li>
-            </ul>
-            <a class="btn btn-outline btn-sm" href="#menu">Order From Here</a>
-          </article>
-
-          <article class="card court-card">
-            <div class="court-top">
-              <h3>Library Snack Bar</h3>
-              <span class="court-status busy">Busy</span>
-            </div>
-            <p>Beside the reading hall · quick bites and coffee</p>
-            <ul class="court-meta">
-              <li><strong>26</strong><span>Live queue</span></li>
-              <li><strong>15 min</strong><span>Prep time</span></li>
-              <li><strong>Counter 2</strong><span>Pickup desk</span></li>
-            </ul>
-            <a class="btn btn-outline btn-sm" href="#menu">Order From Here</a>
-          </article>
-
         </div>
       </div>
     </section>
@@ -233,134 +170,6 @@
       </div>
     </section>
 
-    <!-- ============================= POPULAR FOOD ============================= -->
-    <section class="section section-muted" id="menu">
-      <div class="container">
-        <header class="section-head">
-          <h2>Ready At The Counter</h2>
-          <p>Student favourites you can pre-order today, with live prep times from each court.</p>
-        </header>
-
-        <div class="grid grid-3">
-
-          <article class="card food-card">
-            <div class="food-media">
-              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Plate of chicken biryani" />
-              <span class="badge badge-primary">Best Seller</span>
-            </div>
-            <div class="food-body">
-              <div class="food-top">
-                <h3>Chicken Biryani</h3>
-                <span class="rating">⭐ 4.8</span>
-              </div>
-              <p>Slow-cooked basmati rice with spiced chicken and herbs.</p>
-              <p class="food-court">📍 Central Food Court · ⏱️ ready in 12 min</p>
-              <div class="food-foot">
-                <span class="price">₹149</span>
-                <button class="btn btn-primary btn-sm" type="button">Pre-Order</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card food-card">
-            <div class="food-media">
-              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Bowl of paneer butter masala" />
-              <span class="badge badge-dark">Popular</span>
-            </div>
-            <div class="food-body">
-              <div class="food-top">
-                <h3>Paneer Butter Masala</h3>
-                <span class="rating">⭐ 4.7</span>
-              </div>
-              <p>Creamy tomato gravy with soft paneer cubes.</p>
-              <p class="food-court">📍 Hostel Mess Cafe · ⏱️ ready in 10 min</p>
-              <div class="food-foot">
-                <span class="price">₹129</span>
-                <button class="btn btn-primary btn-sm" type="button">Pre-Order</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card food-card">
-            <div class="food-media">
-              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Crispy chicken burger with fries" />
-              <span class="badge badge-accent">20% OFF</span>
-            </div>
-            <div class="food-body">
-              <div class="food-top">
-                <h3>Chicken Burger</h3>
-                <span class="rating">⭐ 4.6</span>
-              </div>
-              <p>Crispy chicken patty, fresh veggies and house sauce.</p>
-              <p class="food-court">📍 Library Snack Bar · ⏱️ ready in 8 min</p>
-              <div class="food-foot">
-                <span class="price">₹99</span>
-                <button class="btn btn-primary btn-sm" type="button">Pre-Order</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card food-card">
-            <div class="food-media">
-              <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80" alt="Chicken roll wrap sliced on a board" />
-              <span class="badge badge-primary">Grab &amp; Go</span>
-            </div>
-            <div class="food-body">
-              <div class="food-top">
-                <h3>Chicken Roll</h3>
-                <span class="rating">⭐ 4.7</span>
-              </div>
-              <p>Grilled chicken wrapped in a soft paratha with onions.</p>
-              <p class="food-court">📍 Library Snack Bar · ⏱️ ready in 6 min</p>
-              <div class="food-foot">
-                <span class="price">₹89</span>
-                <button class="btn btn-primary btn-sm" type="button">Pre-Order</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card food-card">
-            <div class="food-media">
-              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Fresh veg pizza with vegetables" />
-              <span class="badge badge-dark">Share Box</span>
-            </div>
-            <div class="food-body">
-              <div class="food-top">
-                <h3>Veg Pizza</h3>
-                <span class="rating">⭐ 4.8</span>
-              </div>
-              <p>Cheesy stone-baked pizza loaded with garden veggies.</p>
-              <p class="food-court">📍 Central Food Court · ⏱️ ready in 15 min</p>
-              <div class="food-foot">
-                <span class="price">₹159</span>
-                <button class="btn btn-primary btn-sm" type="button">Pre-Order</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card food-card">
-            <div class="food-media">
-              <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&q=80" alt="Bowl of hakka chowmein noodles" />
-              <span class="badge badge-accent">20% OFF</span>
-            </div>
-            <div class="food-body">
-              <div class="food-top">
-                <h3>Hakka Chowmein</h3>
-                <span class="rating">⭐ 4.6</span>
-              </div>
-              <p>Wok-tossed noodles with crunchy vegetables and sauces.</p>
-              <p class="food-court">📍 Hostel Mess Cafe · ⏱️ ready in 9 min</p>
-              <div class="food-foot">
-                <span class="price">₹119</span>
-                <button class="btn btn-primary btn-sm" type="button">Pre-Order</button>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
     <!-- ============================= SPECIAL OFFER ============================= -->
     <section class="section" id="offers">
       <div class="container">
@@ -369,7 +178,7 @@
             <h2>Get 20% OFF on Your First Pre-Order!</h2>
             <p>Use code <span class="code">KITE20</span> before you book your pickup slot.</p>
           </div>
-          <a class="btn btn-light btn-lg" href="#signup">Claim Offer</a>
+          <a class="btn btn-light btn-lg" href="signup.html">Claim Offer</a>
         </div>
       </div>
     </section>
@@ -508,8 +317,8 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#courts">Food Courts</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="food-courts.html">Food Courts</a></li>
           <li><a href="#slots">Pickup Slots</a></li>
         </ul>
       </nav>

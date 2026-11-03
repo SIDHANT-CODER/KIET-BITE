@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Courts | KITE Bite</title>
+  <meta name="description" content="Explore six KITE Bite campus food courts and browse each court's menu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=4" />
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="index.html#home">
+        <span class="logo-mark" aria-hidden="true">🍔</span>
+        <span class="logo-text">KITE<span class="logo-accent">Bite</span></span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+      <label class="hamburger" for="nav-toggle" role="button" tabindex="0" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="food-courts.html" aria-current="page">Food Courts</a></li>
+          <li><a href="index.html#slots">Pickup Slots</a></li>
+          <li><a href="index.html#offers">Offers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-muted food-courts-section">
+      <div class="container">
+        <header class="section-head">
+          <p class="pill">YOUR CAMPUS, YOUR PICKUP SPOT</p>
+          <h1>Find your food court.</h1>
+          <p>Pick a spot to see what’s cooking there. Every court has a menu of its own.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="card court-card food-court-card" id="central-food-court">
+            <div class="court-top">
+              <h2>Central Food Court</h2>
+              <span class="court-status open">Open</span>
+            </div>
+            <p>Block C, ground floor · Near Lecture Hall 1</p>
+            <ul class="court-meta">
+              <li><strong>12 min</strong><span>Typical prep time</span></li>
+              <li><strong>Counter 3</strong><span>Pickup desk</span></li>
+            </ul>
+            <details class="court-menu">
+              <summary>View menu <span aria-hidden="true">＋</span></summary>
+              <ul class="court-menu-items">
+                <li><span>Chicken Biryani</span><strong>₹149</strong></li>
+                <li><span>Veg Pizza</span><strong>₹159</strong></li>
+                <li><span>Paneer Wrap</span><strong>₹99</strong></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card court-card food-court-card" id="hostel-mess-cafe">
+            <div class="court-top">
+              <h2>Hostel Mess Cafe</h2>
+              <span class="court-status open">Open</span>
+            </div>
+            <p>Boys &amp; Girls hostel block · By the common room</p>
+            <ul class="court-meta">
+              <li><strong>10 min</strong><span>Typical prep time</span></li>
+              <li><strong>Counter 1</strong><span>Pickup desk</span></li>
+            </ul>
+            <details class="court-menu">
+              <summary>View menu <span aria-hidden="true">＋</span></summary>
+              <ul class="court-menu-items">
+                <li><span>Paneer Butter Masala</span><strong>₹129</strong></li>
+                <li><span>Hakka Chowmein</span><strong>₹119</strong></li>
+                <li><span>Masala Dosa</span><strong>₹89</strong></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card court-card food-court-card" id="library-snack-bar">
+            <div class="court-top">
+              <h2>Library Snack Bar</h2>
+              <span class="court-status busy">Busy</span>
+            </div>
+            <p>Beside the reading hall · Quick bites and coffee</p>
+            <ul class="court-meta">
+              <li><strong>15 min</strong><span>Typical prep time</span></li>
+              <li><strong>Counter 2</strong><span>Pickup desk</span></li>
+            </ul>
+            <details class="court-menu">
+              <summary>View menu <span aria-hidden="true">＋</span></summary>
+              <ul class="court-menu-items">
+                <li><span>Chicken Burger</span><strong>₹99</strong></li>
+                <li><span>Chicken Roll</span><strong>₹89</strong></li>
+                <li><span>Cold Coffee</span><strong>₹69</strong></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card court-card food-court-card" id="north-block-canteen">
+            <div class="court-top">
+              <h2>North Block Canteen</h2>
+              <span class="court-status open">Open</span>
+            </div>
+            <p>North academic block · Ground floor lobby</p>
+            <ul class="court-meta">
+              <li><strong>9 min</strong><span>Typical prep time</span></li>
+              <li><strong>Counter 4</strong><span>Pickup desk</span></li>
+            </ul>
+            <details class="court-menu">
+              <summary>View menu <span aria-hidden="true">＋</span></summary>
+              <ul class="court-menu-items">
+                <li><span>Chole Bhature</span><strong>₹99</strong></li>
+                <li><span>Veg Grilled Sandwich</span><strong>₹79</strong></li>
+                <li><span>Paneer Tikka Roll</span><strong>₹109</strong></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card court-card food-court-card" id="south-campus-cafe">
+            <div class="court-top">
+              <h2>South Campus Cafe</h2>
+              <span class="court-status open">Open</span>
+            </div>
+            <p>South campus courtyard · Across from Block D</p>
+            <ul class="court-meta">
+              <li><strong>11 min</strong><span>Typical prep time</span></li>
+              <li><strong>Counter 1</strong><span>Pickup desk</span></li>
+            </ul>
+            <details class="court-menu">
+              <summary>View menu <span aria-hidden="true">＋</span></summary>
+              <ul class="court-menu-items">
+                <li><span>Veg Hakka Noodles</span><strong>₹109</strong></li>
+                <li><span>Margherita Pizza</span><strong>₹139</strong></li>
+                <li><span>French Fries</span><strong>₹69</strong></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card court-card food-court-card" id="coffee-and-co">
+            <div class="court-top">
+              <h2>Coffee &amp; Co.</h2>
+              <span class="court-status open">Open</span>
+            </div>
+            <p>Student activity centre · Next to the auditorium</p>
+            <ul class="court-meta">
+              <li><strong>6 min</strong><span>Typical prep time</span></li>
+              <li><strong>Counter 2</strong><span>Pickup desk</span></li>
+            </ul>
+            <details class="court-menu">
+              <summary>View menu <span aria-hidden="true">＋</span></summary>
+              <ul class="court-menu-items">
+                <li><span>Cappuccino</span><strong>₹89</strong></li>
+                <li><span>Chocolate Brownie</span><strong>₹79</strong></li>
+                <li><span>Veg Puff</span><strong>₹35</strong></li>
+              </ul>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html#home">
+          <span class="logo-mark" aria-hidden="true">🍔</span>
+          <span class="logo-text">KITE<span class="logo-accent">Bite</span></span>
+        </a>
+        <p>Order from class. Collect at break. Never queue again.</p>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="food-courts.html">Food Courts</a></li>
+          <li><a href="index.html#slots">Pickup Slots</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:support@kitebite.com">support@kitebite.com</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 KITE Bite. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
