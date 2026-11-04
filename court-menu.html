@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Court Menu | KITE Bite</title>
+  <meta name="description" content="Explore the menu for your selected KITE Bite campus food court." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=8" />
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="index.html#home">
+        <span class="logo-mark" aria-hidden="true">🍔</span>
+        <span class="logo-text">KITE<span class="logo-accent">Bite</span></span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+      <label class="hamburger" for="nav-toggle" role="button" tabindex="0" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="food-courts.html" aria-current="page">Food Courts</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="index.html#slots">Pickup Slots</a></li>
+          <li><a href="index.html#offers">Offers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-muted">
+      <div class="container">
+        <a class="court-menu-back" href="food-courts.html">← All food courts</a>
+        <p class="profile-status" id="court-menu-status" role="status" aria-live="polite">Loading this food court’s menu…</p>
+
+        <section id="court-menu-content" hidden aria-labelledby="court-menu-title">
+          <header class="court-menu-heading">
+            <p class="pill" id="court-menu-location"></p>
+            <h1 id="court-menu-title"></h1>
+            <p id="court-menu-description"></p>
+          </header>
+          <div class="court-order-layout">
+            <div class="grid grid-2 court-menu-grid" id="court-menu-items"></div>
+            <aside class="card checkout-panel" aria-labelledby="cart-title">
+              <div class="checkout-heading">
+                <div>
+                  <p class="profile-eyebrow">YOUR BREAK, SORTED</p>
+                  <h2 id="cart-title">Your cart</h2>
+                </div>
+                <span class="checkout-cart-icon" aria-hidden="true">🛍️</span>
+              </div>
+              <p class="checkout-empty" id="cart-empty">Your cart is waiting for something tasty.</p>
+              <ul class="checkout-items" id="cart-items" aria-label="Items in your cart"></ul>
+              <div class="checkout-total">
+                <span>Total</span>
+                <strong id="cart-total">₹0</strong>
+              </div>
+
+              <form id="checkout-form">
+                <div class="form-field">
+                  <label for="pickup-slot">Pickup time</label>
+                  <select id="pickup-slot" name="pickupSlot" required>
+                    <option value="">Choose a pickup time</option>
+                  </select>
+                </div>
+                <div class="checkout-pickup">
+                  <span class="checkout-pickup-icon" aria-hidden="true">📍</span>
+                  <span><strong>Pickup at</strong><small id="pickup-location">Select a food court</small></span>
+                </div>
+                <p class="checkout-payment">Pay securely with the demo checkout before collecting your order.</p>
+                <button class="btn btn-primary checkout-submit" id="place-order" type="submit" disabled>Continue to payment</button>
+                <p class="checkout-status" id="checkout-status" role="status" aria-live="polite"></p>
+              </form>
+
+              <section class="demo-payment" id="demo-payment" hidden aria-labelledby="demo-payment-title">
+                <div class="demo-payment-banner">
+                  <span aria-hidden="true">🧪</span>
+                  <p><strong>Demo payment only</strong><small>No real money will be charged.</small></p>
+                </div>
+                <h3 id="demo-payment-title">Complete your payment</h3>
+                <p class="demo-payment-reference" id="demo-payment-order"></p>
+                <div class="demo-payment-total">
+                  <span>Amount due</span>
+                  <strong id="demo-payment-amount"></strong>
+                </div>
+                <button class="btn btn-primary checkout-submit" id="complete-demo-payment" type="button">Complete demo payment</button>
+                <p class="checkout-status" id="payment-status" role="status" aria-live="polite"></p>
+              </section>
+
+              <section class="checkout-confirmation" id="order-confirmation" hidden aria-live="polite">
+                <span class="profile-empty-icon" aria-hidden="true">🎉</span>
+                <h3>Payment complete — you’re all set!</h3>
+                <p id="order-confirmation-details"></p>
+                <div class="pickup-pass">
+                  <img class="pickup-pass-qr" id="pickup-pass-qr" alt="QR code pickup pass for your order" />
+                  <div class="pickup-pass-copy">
+                    <strong>Show this QR code to your vendor</strong>
+                    <span id="pickup-pass-location"></span>
+                    <span id="pickup-pass-time"></span>
+                    <small id="pickup-pass-order"></small>
+                  </div>
+                </div>
+                <a class="btn btn-ghost btn-sm" href="profile.html">View your orders</a>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section class="card court-menu-error" id="court-menu-error" hidden aria-labelledby="court-menu-error-title">
+          <h2 id="court-menu-error-title">We couldn’t find that food court</h2>
+          <p>Choose one of the campus food courts to see its menu.</p>
+          <a class="btn btn-primary btn-sm" href="food-courts.html">Browse food courts</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="court-menu.js" defer></script>
+</body>
+</html>

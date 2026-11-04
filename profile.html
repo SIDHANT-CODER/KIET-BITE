@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | KITE Bite</title>
+  <meta name="description" content="View your KITE Bite account details and order history." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=8" />
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="index.html#home">
+        <span class="logo-mark" aria-hidden="true">🍔</span>
+        <span class="logo-text">KITE<span class="logo-accent">Bite</span></span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+      <label class="hamburger" for="nav-toggle" role="button" tabindex="0" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="food-courts.html">Food Courts</a></li>
+          <li><a href="profile.html" aria-current="page">Profile</a></li>
+          <li><a href="index.html#slots">Pickup Slots</a></li>
+          <li><a href="index.html#offers">Offers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="profile-page">
+    <section class="section section-muted profile-section">
+      <div class="container">
+        <header class="profile-heading">
+          <p class="pill">YOUR KITE BITE ACCOUNT</p>
+          <h1>Your profile<span class="profile-heading-accent">.</span></h1>
+          <p>Keep your account details close and find your orders in one place.</p>
+        </header>
+
+        <p class="profile-status" id="profile-status" role="status" aria-live="polite">Loading your profile…</p>
+
+        <section class="profile-signed-out card" id="profile-signed-out" hidden aria-labelledby="signed-out-title">
+          <span class="profile-empty-icon" aria-hidden="true">👋</span>
+          <h2 id="signed-out-title">Sign in to see your profile</h2>
+          <p>Your account details and order history are available after you log in.</p>
+          <a class="btn btn-primary" href="login.html">Log In</a>
+        </section>
+
+        <div class="profile-layout" id="profile-content" hidden>
+          <aside class="card profile-summary" aria-label="Account summary">
+            <div class="profile-avatar" id="profile-avatar" aria-hidden="true">KB</div>
+            <p class="profile-member-label">KITE Bite member</p>
+            <h2 id="profile-name">Your profile</h2>
+            <p class="profile-email" id="profile-email"></p>
+            <a class="btn btn-ghost profile-summary-link" href="food-courts.html">Browse food courts <span aria-hidden="true">↗</span></a>
+            <button class="btn btn-outline profile-logout" id="profile-logout" type="button">Log out</button>
+            <p class="profile-logout-status" id="profile-logout-status" role="status" aria-live="polite"></p>
+          </aside>
+
+          <div class="profile-details">
+            <section class="card profile-card" aria-labelledby="account-details-title">
+              <div class="profile-card-heading">
+                <div>
+                  <p class="profile-eyebrow">ACCOUNT</p>
+                  <h2 id="account-details-title">Personal details</h2>
+                </div>
+                <span class="profile-card-icon" aria-hidden="true">✦</span>
+              </div>
+              <dl class="profile-info-list">
+                <div class="profile-info-row">
+                  <dt>Full name</dt>
+                  <dd id="profile-detail-name"></dd>
+                </div>
+                <div class="profile-info-row">
+                  <dt>Email address</dt>
+                  <dd id="profile-detail-email"></dd>
+                </div>
+                <div class="profile-info-row">
+                  <dt>Member since</dt>
+                  <dd id="profile-member-since"></dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="card profile-card profile-orders" aria-labelledby="order-history-title">
+              <div class="profile-card-heading">
+                <div>
+                  <p class="profile-eyebrow">YOUR FOOD JOURNEY</p>
+                  <h2 id="order-history-title">Order history</h2>
+                </div>
+                <a class="text-link profile-view-menu" href="food-courts.html">Explore food courts <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="order-history-status" id="order-history-status" role="status" aria-live="polite"></p>
+              <div class="profile-order-empty" id="order-history-empty" hidden>
+                <span class="profile-empty-icon" aria-hidden="true">🍽️</span>
+                <h3>No orders to show yet</h3>
+                <p>Your past orders will appear here once you start ordering with KITE Bite.</p>
+                <a class="btn btn-primary btn-sm" href="food-courts.html">Find your next bite</a>
+              </div>
+              <div class="profile-order-list" id="order-history-list" hidden></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="pickup-pass-dialog" id="pickup-pass-dialog" aria-labelledby="pickup-pass-dialog-title">
+    <div class="pickup-pass-dialog-heading">
+      <div>
+        <p class="profile-eyebrow">YOUR KITE BITE PICKUP PASS</p>
+        <h2 id="pickup-pass-dialog-title">Show this QR to your vendor</h2>
+      </div>
+      <button class="pickup-pass-close" id="pickup-pass-close" type="button" aria-label="Close pickup pass">×</button>
+    </div>
+    <p class="pickup-pass-dialog-status" id="pickup-pass-dialog-status" role="status" aria-live="polite"></p>
+    <div class="pickup-pass-dialog-content" id="pickup-pass-dialog-content" hidden>
+      <img class="pickup-pass-qr" id="profile-pickup-pass-qr" alt="QR code pickup pass for your order" />
+      <div class="pickup-pass-copy">
+        <strong id="profile-pickup-pass-location"></strong>
+        <span id="profile-pickup-pass-time"></span>
+        <small id="profile-pickup-pass-order"></small>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="profile.js" defer></script>
+</body>
+</html>

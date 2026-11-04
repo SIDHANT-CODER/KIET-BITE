@@ -7,13 +7,21 @@ if (!(signupForm instanceof HTMLFormElement)) {
 const passwordInput = signupForm.querySelector("#password");
 const confirmPasswordInput = signupForm.querySelector("#confirm-password");
 const signupStatus = signupForm.querySelector("#signup-status");
+const loginLink = signupForm.querySelector(".login-signup a");
 
 if (
   !(passwordInput instanceof HTMLInputElement) ||
   !(confirmPasswordInput instanceof HTMLInputElement) ||
-  !(signupStatus instanceof HTMLElement)
+  !(signupStatus instanceof HTMLElement) ||
+  !(loginLink instanceof HTMLAnchorElement)
 ) {
   throw new Error("The sign-up form is missing a required field.");
+}
+
+const orderCourt = new URLSearchParams(window.location.search).get("orderCourt");
+const validCourtId = /^[a-z]+(?:-[a-z]+)*$/;
+if (orderCourt && validCourtId.test(orderCourt)) {
+  loginLink.href = `login.html?orderCourt=${encodeURIComponent(orderCourt)}`;
 }
 
 function validatePasswordMatch() {
@@ -56,6 +64,11 @@ signupForm.addEventListener("submit", (event) => {
       const result = await response.json();
       if (!response.ok) {
         throw new Error(result.error || "Could not create your account.");
+      }
+
+      if (orderCourt && validCourtId.test(orderCourt)) {
+        window.location.assign(`court-menu.html?court=${encodeURIComponent(orderCourt)}`);
+        return;
       }
 
       signupStatus.textContent = `Account created, ${result.user.name}. You are signed in.`;

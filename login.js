@@ -5,9 +5,16 @@ if (!(loginForm instanceof HTMLFormElement)) {
 }
 
 const loginStatus = loginForm.querySelector("#login-status");
+const signupLink = loginForm.querySelector(".login-signup a");
 
-if (!(loginStatus instanceof HTMLElement)) {
+if (!(loginStatus instanceof HTMLElement) || !(signupLink instanceof HTMLAnchorElement)) {
   throw new Error("The login status message could not be found.");
+}
+
+const orderCourt = new URLSearchParams(window.location.search).get("orderCourt");
+const validCourtId = /^[a-z]+(?:-[a-z]+)*$/;
+if (orderCourt && validCourtId.test(orderCourt)) {
+  signupLink.href = `signup.html?orderCourt=${encodeURIComponent(orderCourt)}`;
 }
 
 loginForm.addEventListener("submit", (event) => {
@@ -42,7 +49,9 @@ loginForm.addEventListener("submit", (event) => {
         throw new Error(result.error || "Could not sign in.");
       }
 
-      window.location.assign("/index.html");
+      window.location.assign(orderCourt && validCourtId.test(orderCourt)
+        ? `court-menu.html?court=${encodeURIComponent(orderCourt)}`
+        : "/index.html");
     })
     .catch((error) => {
       loginStatus.textContent = error instanceof TypeError
